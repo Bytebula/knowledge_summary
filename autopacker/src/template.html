@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{TITLE}}</title>
+<style>{{STYLE}}</style>
+</head>
+<body>
+<header id="topbar">
+  <button id="btn-sidebar" class="tb-btn" title="展开 / 收起侧栏（目录）">☰</button>
+  <button id="btn-back" class="tb-btn" title="返回上一个页面">← 返回</button>
+  <button id="btn-home" class="tb-btn" title="回到首页">⌂ 首页</button>
+  <span id="tb-title"></span>
+  <span class="tb-spacer"></span>
+  <button id="btn-font-dec" class="tb-btn" title="减小字号">A−</button>
+  <button id="btn-font-reset" class="tb-btn" title="重置字号">A</button>
+  <button id="btn-font-inc" class="tb-btn" title="增大字号">A＋</button>
+  <button id="btn-theme" class="tb-btn" title="切换深色 / 浅色模式">◐</button>
+</header>
+<div id="backdrop"></div>
+<nav id="sidebar">
+  <div id="sb-tabs">
+    <button class="sb-tab active" data-tab="toc">目录</button>
+    <button class="sb-tab" data-tab="outline">大纲</button>
+  </div>
+  <div id="sb-toc" class="sb-pane sb-tree active"></div>
+  <div id="sb-outline" class="sb-pane sb-outline"></div>
+</nav>
+<main id="content" class="md-body"></main>
+<div id="toast"></div>
+<script>window.MDPACK_DATA={{DATA}};</script>
+<script>{{MERMAID_LIB}}</script>
+<script>{{RUNTIME}}</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+mdpack — 把一个文件夹内的 Markdown 全部打包成单个自包含 HTML 文件
+
+用法:
+  node mdpack.mjs <文件夹> [选项]
+
+选项:
+  --entry <文件>   入口 md（必须是文件夹一级下的文件），默认 README.md
+  -o, --output     输出 html 路径，默认 <文件夹名>.html（写在文件夹根下）
+  --title <标题>   文档标题，默认取入口文件的一级标题
+  --exclude <名>   额外排除的文件/文件夹名（可多次使用；
+                   .git / .idea / node_modules / 输出文件本身默认排除）
+  --mermaid        嵌入 mermaid 以支持 ```mermaid 图表（需先 npm i mermaid）
+  -h, --help       显示本帮助
+
+示例:
+  node mdpack.mjs ..\knowledge_summary --exclude autopacker -o 知识总结.html
